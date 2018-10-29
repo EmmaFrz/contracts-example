@@ -25,18 +25,18 @@ $html =
     $dompdf->load_html($html);
     $dompdf->render();
     $output = $dompdf->output();
-    file_put_contents('Brochure.pdf'.$_POST['email'].random_int(1, 100), $output);
+    file_put_contents('pdf/Brochure.pdf'.$_POST['email'], $output);
 
 
-/*$client = new Client('cde1a6ecd551e80b5198e239c173a7454e6052b75d51ae0d8f2fe43ddd363abd');
+$client = new Client('cde1a6ecd551e80b5198e239c173a7454e6052b75d51ae0d8f2fe43ddd363abd');
 $request = new SignatureRequest;
 $request->enableTestMode();
 $request->setTitle('PDF + Correo');
 $request->setSubject('Prueba de control');
 $request->setMessage('This is a email test');
 $request->addSigner( $_POST['email'], $_POST['name']);
-$request->addFile('Brochure.pdf');
+$request->addFile('pdf/Brochure.pdf'.$_POST['email']);
 $response = $client->sendSignatureRequest($request);
 	echo "mensaje enviado <a href='index.php'>Regresar</a>";
-*/
+
 ?>
