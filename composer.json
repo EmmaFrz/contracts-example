@@ -1,5 +1,7 @@
 {
     "require": {
-        "hellosign/hellosign-php-sdk": "^3.5"
+        "hellosign/hellosign-php-sdk": "^3.5",
+        "setasign/fpdi-fpdf": "2.0",
+        "dompdf/dompdf": "^0.8.2"
     }
 }
